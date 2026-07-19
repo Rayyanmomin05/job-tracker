@@ -13,12 +13,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'https://job-tracker-six-fawn.vercel.app',
-    'https://job-tracker-mawl857nq-rayyan-momin-s-projects.vercel.app'
-  ],
-  credentials: true
+  origin: '*',
+  credentials: false
 }));
 app.use(express.json());
 
