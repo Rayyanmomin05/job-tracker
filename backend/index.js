@@ -29,10 +29,10 @@ app.get('/', (req, res) => {
 sequelize
   .sync({ alter: true })
   .then(() => {
-    console.log('MySQL connected and tables synced');
-    app.listen(PORT, () => {
-      console.log(`Server running on http://localhost:${PORT}`);
-    });
+      console.log('MySQL connected and tables synced');
+      app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
   })
   .catch((err) => {
     console.error('Database connection failed:', err.message);
