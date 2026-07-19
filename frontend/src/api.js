@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'https://job-tracker-production-28bd.up.railway.app' });
+const API = axios.create({ baseURL: 'https://job-tracker-me.up.railway.app' });
 
 export const getApplications = (params) => API.get('/applications', { params });
 export const getApplicationById = (id) => API.get(`/applications/${id}`);
