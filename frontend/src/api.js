@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'https://job-tracker-me.up.railway.app' });
+const API = axios.create({ baseURL: 'https://job-tracker-backend-fgo9.onrender.com' });
 
 export const getApplications = (params) => API.get('/applications', { params });
 export const getApplicationById = (id) => API.get(`/applications/${id}`);
